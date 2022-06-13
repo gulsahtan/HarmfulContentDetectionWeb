@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "u65GUlmgKFD/bQyInC5gDnVXsQzEB5FwPHRkEnyP5/xulEu8wTnSsQz8Y+Gs2f4MQU22KgNicc4wE7rArbmgsA==",
+  "success": true,
+  "projectFilePath": "E:\\tezkod\\13.06\\5.8.1\\aspnet-core\\HarmfulContentDetection.Scorer\\HarmfulContentDetection.Scorer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gulsahtan\\.nuget\\packages\\microsoft.ml.onnxruntime.managed\\1.10.0\\microsoft.ml.onnxruntime.managed.1.10.0.nupkg.sha512",
+    "C:\\Users\\gulsahtan\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\gulsahtan\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\gulsahtan\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\gulsahtan\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\gulsahtan\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\gulsahtan\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\gulsahtan\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}
