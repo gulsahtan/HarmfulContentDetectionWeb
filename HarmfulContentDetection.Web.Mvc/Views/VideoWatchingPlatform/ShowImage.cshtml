@@ -1,0 +1,65 @@
+﻿@model HarmfulContentDetection.Web.Dto.ObjectDetectionVideoDetectDto
+
+@{ ViewBag.Title = L("ShowImage"); }
+@section scripts
+{
+    <environment names="Development">
+        <script src="~/libs/chartjs/dist/Chart.js" asp-append-version="true"></script>
+        <script src="~/view-resources/Views/Home/Index.js" asp-append-version="true"></script>
+        <script src="~/js/jquery-3.4.1.min.js" asp-append-version="true"></script>
+    </environment>
+
+    <environment names="Staging,Production">
+        <script src="~/view-resources/Views/_Bundles/home-index.min.js" asp-append-version="true"></script>
+    </environment>
+}
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-12">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card-footer col-12">
+    <div class="row">
+        <div class="col-sm-6 col-6">
+            <div class="description-block border-right">
+                @if (Model.Detect != false)
+                {
+    <div class="video-frame">
+
+        <video controls="controls">
+            <source src="~/DetectVideos/@Model.VideoModel" type="video/mp4" />
+        </video>
+    </div> }
+else
+{
+<div class="video-frame">
+
+    <video controls="controls">
+        <source src="~/OrijinalVideos/@Model.VideoModel" type="video/mp4" />
+    </video>
+</div>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+@*<div class="card-footer col-8">
+        <div class="row">
+            <div class="col-sm-3 col-6">
+                <div class="description-block border-right">
+                    <div class="video-frame">
+                        <div class="video-frame">
+                                <video controls="controls">
+                                    <source src="/VideoWatchingPlatform/OrijinalVideoStream?id=@Model.Id &alcohol=@Model.Alcohol &violence=@Model.Violence&cigarette=@Model.Cigarette " type="video/mp4" />
+                                </video>
+                            </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>*@

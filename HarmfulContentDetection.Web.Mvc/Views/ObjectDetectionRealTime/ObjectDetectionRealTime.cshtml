@@ -1,0 +1,182 @@
+﻿@model HarmfulContentDetection.Web.Dto.ObjectDetectionImageListDto
+
+@{ ViewBag.Title = L("ObjectDetectionRealTime"); }
+@section scripts
+{
+    <environment names="Development">
+        <script src="~/libs/chartjs/dist/Chart.js" asp-append-version="true"></script>
+        <script src="~/view-resources/Views/Home/Index.js" asp-append-version="true"></script>
+        <script src="~/js/jquery-3.4.1.min.js" asp-append-version="true"></script>
+    </environment>
+
+    <environment names="Staging,Production">
+        <script src="~/view-resources/Views/_Bundles/home-index.min.js" asp-append-version="true"></script>
+    </environment>
+    @*<script type="text/javascript">
+            var frm = document.getElementById('FrameNo').value;
+            var alcohol = document.getElementById('Alcoholv').value;
+            var cigarette = document.getElementById('Cigarettev').value;
+            var violence = document.getElementById('Violencev').value;
+
+            var i = 0;
+            $(document).on("click", "#Detect", function () {
+                while (i < frm) {
+                    debugger;
+                    i = i + 1;
+                    var url = "/ObjectDetectionRealTime/ShowImage?id=" + i + "&alcohol=" + alcohol + "&cigarette=" + cigarette + "&violence=" + violence;
+                    $.get(url, function (data) {
+                        $("#content").html(data);
+                    });
+                }
+
+            });
+            $("#Image").change(function () {
+                filename = this.files[0].name;
+                console.log(filename);
+            });
+
+            $(function () {
+                $('[id*=btnLoader]').hide();
+                $('[id*=Upload]').on("click", function () {
+                    setTimeout(function () {
+                        $('[id*=Upload]').hide();
+                        $('[id*=btnLoader]').show();
+                    }, 200);
+                });
+            });
+        </script>*@
+}
+<!--<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-12">
+            </div>
+        </div>
+    </div>
+</div>
+<form method="post" enctype="multipart/form-data" asp-controller="ObjectDetectionRealTime" asp-action="ObjectDetectionRealTime">
+    <input type="hidden" id="FrameNo" name="FrameNo" asp-for="@Model.FrameNo">
+    <input type="hidden" id="Cigarettev" name="Cigarettev" asp-for="@Model.Cigarettev">
+    <input type="hidden" id="Alcoholv" name="Alcoholv" asp-for="@Model.Alcoholv">
+    <input type="hidden" id="Violencev" name="Violencev" asp-for="@Model.Violencev">
+
+    <section class=" content">
+        <div class="container-fluid">
+            <div class="card">
+                <h3 class="card-title">@L("DataSetTrain")</h3>
+                <div class="card-header">
+
+                    <div class="col-6 col-sm-6 col-md-3">
+                        <div class="info-box mb-3 bg-danger">
+                            <span class="info-box-icon"><i class="fas fa-cloud-download-alt"></i></span>
+                            <div class="info-box-content">
+                                <a href="../DataSet/VideoZip" class="btn btn-danger" style="margin-top:20px;"><span class="info-box-text">@L("TestVideo") Zip</span></a>
+
+                            </div>-->
+<!-- /.info-box-content -->
+<!--</div>-->
+<!-- /.info-box -->
+<!--</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">@L("ObjectDetectionRealTime")</h5>
+                </div>
+
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>@L("Category")</label>
+                        <div class="row">
+                            <div class="col-md-2 btn btn-default">
+                                <input type="checkbox" id="Alcohol" name="Alcohol" asp-for="@Model.Alcohol"><span style="color:black">@L("Alcohol")</span>
+                            </div>
+                            <div class="col-md-2 btn btn-default">
+                                <input type="checkbox" id="Cigarette" name="Cigarette" asp-for="@Model.Cigarette"><span style="color:black">@L("Cigarette")</span>
+                            </div>
+
+                            <div class="col-md-2 btn btn-default">
+                                <input type="checkbox" id="Violence" name="Violence" asp-for="@Model.Violence"><span style="color:black">@L("ElementsofViolence")</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Video (.mp4, .mp3)</label>
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <input type="file" id="Image" name="Image" required accept=".mp4, .mp3">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class=" col-md-3 ">
+                            <input type="submit" value="@L("Upload")" id="Upload" class="btn btn-danger" />
+                            <button class="buttonload" id="btnLoader" style="display: none;" disabled>
+                                <i class="fa fa-spinner fa-spin"></i>@L("Loading")
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer col-8">
+                    <div class="row">
+                        <div class="col-sm-3 col-6">
+                            <div class="description-block border-right">
+                                @if (Model.Image != null)
+                                {
+
+                                    <input type="button" value="@L("Detect")" id="Detect" class="btn btn-danger" />
+
+                                }
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div id="content"></div>
+
+
+            </div>
+        </div>
+    </section>
+</form>-->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-12">
+            </div>
+        </div>
+    </div>
+</div>
+<section class="content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">@L("ObjectDetectionRealTime")</h5>
+            </div>
+            <div class="card-body">
+                <!-- Info boxes -->
+                <div class="row">
+
+                    <div class="col-8 col-sm-8 col-md-8">
+                        <div class="info-box mb-8 bg-danger">
+                            <span class="info-box-icon"><i class="fas fa-cloud-download-alt"></i></span>
+                            <div class="info-box-content">
+                                <a href="../DataSet/FormAppZip" class="btn btn-danger" style="margin-top:20px;"><span class="info-box-text">@L("FormApplication") Zip</span></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h5 class="card-title">@L("RealTimeFormApp")</h5>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

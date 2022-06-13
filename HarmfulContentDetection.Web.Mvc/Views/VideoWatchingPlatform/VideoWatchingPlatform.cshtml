@@ -1,0 +1,167 @@
+﻿@model List<HarmfulContentDetection.Web.Dto.ObjectDetectionVideoDetectDto>
+@{
+    ViewBag.Title = L("VideoWatchingPlatform");
+}
+@section scripts
+    {
+    <environment names="Development">
+        <script src="~/libs/chartjs/dist/Chart.js" asp-append-version="true"></script>
+        <script src="~/view-resources/Views/Home/Index.js" asp-append-version="true"></script>
+    </environment>
+
+    <environment names="Staging,Production">
+        <script src="~/view-resources/Views/_Bundles/home-index.min.js" asp-append-version="true"></script>
+    </environment>
+
+}
+
+
+    <style>
+        .sk-chase {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            animation: sk-chase 2.5s infinite linear both;
+        }
+
+        .sk-chase-dot {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: sk-chase-dot 2.0s infinite ease-in-out both;
+        }
+
+            .sk-chase-dot:before {
+                content: '';
+                display: block;
+                width: 25%;
+                height: 25%;
+                background-color: #fff;
+                border-radius: 100%;
+                animation: sk-chase-dot-before 2.0s infinite ease-in-out both;
+            }
+
+            .sk-chase-dot:nth-child(1) {
+                animation-delay: -1.1s;
+            }
+
+            .sk-chase-dot:nth-child(2) {
+                animation-delay: -1.0s;
+            }
+
+            .sk-chase-dot:nth-child(3) {
+                animation-delay: -0.9s;
+            }
+
+            .sk-chase-dot:nth-child(4) {
+                animation-delay: -0.8s;
+            }
+
+            .sk-chase-dot:nth-child(5) {
+                animation-delay: -0.7s;
+            }
+
+            .sk-chase-dot:nth-child(6) {
+                animation-delay: -0.6s;
+            }
+
+            .sk-chase-dot:nth-child(1):before {
+                animation-delay: -1.1s;
+            }
+
+            .sk-chase-dot:nth-child(2):before {
+                animation-delay: -1.0s;
+            }
+
+            .sk-chase-dot:nth-child(3):before {
+                animation-delay: -0.9s;
+            }
+
+            .sk-chase-dot:nth-child(4):before {
+                animation-delay: -0.8s;
+            }
+
+            .sk-chase-dot:nth-child(5):before {
+                animation-delay: -0.7s;
+            }
+
+            .sk-chase-dot:nth-child(6):before {
+                animation-delay: -0.6s;
+            }
+    </style>
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-12">
+                </div>
+            </div>
+        </div>
+    </div>
+    <form method="post" enctype="multipart/form-data" asp-controller="VideoWatchingPlatform" asp-action="Show" id="formimage">
+        <section class="content">
+            <div class="container-fluid">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">@L("VideoWatchingPlatform")</h5>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="form-group">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                       
+                                        <th>
+                                            @L("VideoName")
+                                        </th>
+                                        <th>
+                                            @L("VideoContent")
+                                        </th>
+                                        <th>
+                                            @L("Category")
+                                        </th>
+                                        <th>
+                                            @L("Process")
+                                            
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                {
+                                    <tr>                                 
+                                        <td>
+                                            <input type="hidden" id="Id" asp-for="@item.Id" name="Id"><span style="color:black"></span>
+
+                                            @item.VideoName
+                                        </td>
+                                        <td>
+                                            @item.VideoContent
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="Cigarette" asp-for="@item.Cigarette" name="Cigarette"><span style="color:black">@L("Cigarette")</span>
+                                            <input type="checkbox" id="Violence" asp-for="@item.Violence" name="Violence"><span style="color:black">@L("ElementsofViolence")</span>
+                                            <input type="checkbox" id="Alcohol" asp-for="@item.Alcohol" name="Alcohol"><span style="color:black">@L("Alcohol")</span>
+                                        </td>
+                                        <td>
+                                            <input type="submit" value="@L("Watch")" class="btn btn-danger" id="btnSubmit" />
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+</form>
+
+

@@ -1,0 +1,103 @@
+﻿@model HarmfulContentDetection.Web.Dto.ObjectDetectionImageDto
+
+@{ ViewBag.Title = L("ObjectDetectionImage"); }
+@section scripts
+{
+    <environment names="Development">
+        <script src="~/libs/chartjs/dist/Chart.js" asp-append-version="true"></script>
+        <script src="~/view-resources/Views/Home/Index.js" asp-append-version="true"></script>
+        <script src="~/js/jquery-3.4.1.min.js" asp-append-version="true"></script>
+    </environment>
+
+    <environment names="Staging,Production">
+        <script src="~/view-resources/Views/_Bundles/home-index.min.js" asp-append-version="true"></script>
+    </environment>
+    <script type="text/javascript">
+        $("#Image").change(function () {
+            filename = this.files[0].name;
+            console.log(filename);
+        });
+        $(function () {
+            $('[id*=btnLoader]').hide();
+            $('[id*=btnSubmit]').on("click", function () {
+                setTimeout(function () {
+                    $('[id*=btnSubmit]').hide();
+                    $('[id*=btnLoader]').show();
+                }, 200);
+            });
+        });
+    </script>
+}
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-12">
+            </div>
+        </div>
+    </div>
+</div>
+<form method="post" enctype="multipart/form-data" asp-controller="ObjectDetectionImage" asp-action="ObjectDetectionOnImage" id="formimage">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">@L("ObjectDetectionImage")</h5>
+                </div>
+
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>@L("Category")</label>
+                        <div class="row">
+                            <div class="col-md-2 btn btn-default">
+                                <input type="checkbox" id="Alcohol" name="Alcohol" asp-for="@Model.Alcohol"><span style="color:black">@L("Alcohol")</span>
+                            </div>
+                            <div class="col-md-2 btn btn-default">
+                                <input type="checkbox" id="Cigarette" name="Cigarette" asp-for="@Model.Cigarette"><span style="color:black">@L("Cigarette")</span>
+                            </div>
+               
+                            <div class="col-md-2 btn btn-default">
+                                <input type="checkbox" id="Violence" name="Violence" asp-for="@Model.Violence"><span style="color:black">@L("ElementsofViolence")</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>@L("Image") (.png, .jpg, .jpeg)</label>
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <input type="file" id="Image" name="Image" required accept=".png, .jpg, .jpeg">
+
+                                @*<label for="Image" class="btn" style="background-color: #f8f9fa; border-color: #ddd; font-weight: 500 !important">@L("Choose")</label>
+        <input class="btn btn-default" style="visibility:hidden;" type="file" id="Image" name="Image" required accept=".png, .jpg, .jpeg">*@
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class=" col-md-3 ">
+                            <input type="submit" value="@L("Detect")" class="btn btn-danger" id="btnSubmit"/>
+                            <button class="buttonload" id="btnLoader" style="display: none;" disabled>
+                                <i class="fa fa-spinner fa-spin"></i>@L("Loading")
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer col-8">
+                    <div class="row">
+                        <div class="col-sm-3 col-6">
+                            <div class="description-block border-right">
+
+                                @if (Model.Image != null)
+                                {
+                    <img width="640" height="640" src="data:@Model.Image;base64,@(Convert.ToBase64String(@Model.Image))" />}
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</form>

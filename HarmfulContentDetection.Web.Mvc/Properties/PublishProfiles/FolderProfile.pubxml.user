@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\gulsahtan\Desktop\publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Assets/alcoholweight/best.onnx">
+      <publishTime>11/01/2021 20:38:40</publishTime>
+    </File>
+    <File Include="Assets/cigaretteweight/best.onnx">
+      <publishTime>11/01/2021 20:37:47</publishTime>
+    </File>
+    <File Include="Assets/nudityweight/best.onnx">
+      <publishTime>11/01/2021 20:36:32</publishTime>
+    </File>
+    <File Include="Assets/violenceweight/best.onnx">
+      <publishTime>11/01/2021 20:35:26</publishTime>
+    </File>
+    <File Include="Assets/Weights/yolov5s.onnx">
+      <publishTime>10/17/2021 10:36:44</publishTime>
+    </File>
+    <File Include="ffmpeg.exe">
+      <publishTime>01/27/2022 10:03:09</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

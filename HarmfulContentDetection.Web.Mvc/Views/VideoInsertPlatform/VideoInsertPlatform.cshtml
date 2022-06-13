@@ -1,0 +1,72 @@
+﻿@model HarmfulContentDetection.Web.Dto.ObjectDetectionVideoInsertDto
+@{ ViewBag.Title = L("VideoInsertPlatform"); }
+@section scripts
+                                                         {
+    <environment names="Development">
+        <script src="~/libs/chartjs/dist/Chart.js" asp-append-version="true"></script>
+        <script src="~/view-resources/Views/Home/Index.js" asp-append-version="true"></script>
+    </environment>
+
+    <environment names="Staging,Production">
+        <script src="~/view-resources/Views/_Bundles/home-index.min.js" asp-append-version="true"></script>
+    </environment>
+
+}
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-12">
+            </div>
+        </div>
+    </div>
+</div>
+
+<form method="post" role="form" enctype="multipart/form-data" asp-controller="VideoInsertPlatform" asp-action="Create">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">@L("VideoInsertPlatform")</h5>
+                </div>
+
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>@L("Category")</label>
+                        <div class="row ">
+                            <div class="col-md-2 btn btn-default">
+                                <input type="checkbox" id="Alcohol" name="Alcohol" asp-for="@Model.Alcohol"><span style="color:black">@L("Alcohol")</span>
+                            </div>
+                            <div class="col-md-2 btn btn-default">
+                                <input type="checkbox" id="Cigarette" name="Cigarette" asp-for="@Model.Cigarette"><span style="color:black">@L("Cigarette")</span>
+                            </div>
+
+                            <div class="col-md-2 btn btn-default">
+                                <input type="checkbox" id="Violence" name="Violence" asp-for="@Model.Violence"><span style="color:black">@L("ElementsofViolence")</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Video (.mp4, .mp3)</label>
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <input type="file" id="VideoData" name="VideoData" required accept=".mp4, .mp3">
+
+                                @*<input name="file" type="file" class="form-control" />
+                                <span asp-validation-for="VideoData" class="text-danger"></span>*@
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class=" col-md-3 ">
+                            <input type="submit" value="@L("Save")" class="btn btn-danger"/>                            
+                        </div>
+                    </div>
+                </div>                
+
+            </div>
+        </div>
+    </section>   
+</form>

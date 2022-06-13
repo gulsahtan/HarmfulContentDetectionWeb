@@ -1,0 +1,89 @@
+﻿@using HarmfulContentDetection.Web.Startup
+@{ ViewBag.Title = L("DataSet");
+    ViewBag.CurrentPageName = PageNames.DataSet; }
+@section scripts
+{
+    <environment names="Development">
+        <script src="~/libs/chartjs/dist/Chart.js" asp-append-version="true"></script>
+        <script src="~/view-resources/Views/Home/Index.js" asp-append-version="true"></script>
+    </environment>
+
+    <environment names="Staging,Production">
+        <script src="~/view-resources/Views/_Bundles/home-index.min.js" asp-append-version="true"></script>
+    </environment>
+}
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-12">
+            </div>
+        </div>
+    </div>
+</div>
+<section class="content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">@L("DataSet")</h5>
+            </div>
+            <div class="card-body">
+                <!-- Info boxes -->
+                <div class="row">
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="info-box mb-3 bg-danger">
+                            <span class="info-box-icon"><i class="fas fa-cloud-download-alt"></i></span>
+                            <div class="info-box-content">
+                                <a href="../DataSet/AlcoholZip" class="btn btn-danger" style="margin-top:20px;"><span class="info-box-text">@L("Alcohol") Zip</span></a>
+
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+                    <!-- fix for small devices only -->
+                    <div class="clearfix hidden-md-up"></div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="info-box mb-3 bg-danger">
+                            <span class="info-box-icon"><i class="fas fa-cloud-download-alt"></i></span>
+                            <div class="info-box-content">
+                                <a href="../DataSet/ViolenceZip" class="btn btn-danger" style="margin-top:20px;"><span class="info-box-text">@L("ElementsofViolence") Zip</span></a>
+
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="info-box mb-3 bg-danger">
+                            <span class="info-box-icon"><i class="fas fa-cloud-download-alt"></i></span>
+                            <div class="info-box-content">
+                                <a href="../DataSet/CigaretteZip" class="btn btn-danger" style="margin-top:20px;"><span class="info-box-text">@L("Cigarette") Zip</span></a>
+
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="info-box mb-3 bg-danger">
+                            <span class="info-box-icon"><i class="fas fa-cloud-download-alt"></i></span>
+                            <div class="info-box-content">
+                                <a href="../DataSet/VideoZip" class="btn btn-danger" style="margin-top:20px;"><span class="info-box-text">@L("TestVideo") Zip</span></a>
+
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,138 @@
+﻿@using HarmfulContentDetection.Web.Startup
+@{
+    ViewBag.Title = L("HomePage");
+    ViewBag.CurrentPageName = PageNames.Home;
+}
+@section scripts
+{
+    <environment names="Development">
+        <script src="~/libs/chartjs/dist/Chart.js" asp-append-version="true"></script>
+        <script src="~/view-resources/Views/Home/Index.js" asp-append-version="true"></script>
+    </environment>
+
+    <environment names="Staging,Production">
+        <script src="~/view-resources/Views/_Bundles/home-index.min.js" asp-append-version="true"></script>
+    </environment>
+}
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-12">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<section class="content">
+    <div class="container-fluid">
+        <!-- Info boxes -->
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">@L("SuccessRate")</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                   
+                    <!-- /.col -->
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="info-box mb-3">
+                            <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-glass-cheers"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">@L("Alcohol")</span>
+                                <span class="info-box-number">
+                                    97
+                                    <small>%</small>
+                                </span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+                    <!-- fix for small devices only -->
+                    <div class="clearfix hidden-md-up"></div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="info-box mb-3">
+                            <span class="info-box-icon bg-success elevation-1"><i class="fas fa-hammer"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">@L("ElementsofViolence")</span>
+                                <span class="info-box-number">
+                                    96
+                                    <small>%</small>
+                                </span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="info-box mb-3">
+                            <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-smoking"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">@L("Cigarette")</span>
+                                <span class="info-box-number">
+                                    98
+                                    <small>%</small>
+                                </span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">@L("SampleImagesofDetectedObjects")</h5>                           
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                              
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <div class="info-box mb-3">
+                                        <div class="info-box-content">
+                                            <img width="250" height="250" src="/img/alcohol.png" />
+                                        </div>
+                                        <!-- /.info-box-content -->
+                                    </div>
+                                    <!-- /.info-box -->
+                                </div>
+                                <!-- /.col -->
+                                <!-- fix for small devices only -->
+                                <div class="clearfix hidden-md-up"></div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <div class="info-box mb-3">
+                                        <div class="info-box-content">
+                                            <img width="250" height="250" src="/img/violence.png" />
+                                        </div>
+                                        <!-- /.info-box-content -->
+                                    </div>
+                                    <!-- /.info-box -->
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <div class="info-box mb-3">
+                                        <div class="info-box-content">
+                                            <img width="250" height="250" src="/img/cigarette.png" />
+                                        </div>
+                                        <!-- /.info-box-content -->
+                                    </div>
+                                    <!-- /.info-box -->
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                        </div>
+                   
+                    </div>
+                 
+                </div>
+              
+            </div>
+      
+        </div>
+    </div>
+</section>

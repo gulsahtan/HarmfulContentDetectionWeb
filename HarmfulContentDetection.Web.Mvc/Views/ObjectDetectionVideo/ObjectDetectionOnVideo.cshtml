@@ -1,0 +1,181 @@
+﻿@model HarmfulContentDetection.Web.Dto.ObjectDetectionVideoDto
+
+@{ ViewBag.Title = L("ObjectDetectionVideo"); }
+@section scripts
+{
+    <environment names="Development">
+        <script src="~/libs/chartjs/dist/Chart.js" asp-append-version="true"></script>
+        <script src="~/view-resources/Views/Home/Index.js" asp-append-version="true"></script>
+    </environment>
+
+    <environment names="Staging,Production">
+        <script src="~/view-resources/Views/_Bundles/home-index.min.js" asp-append-version="true"></script>
+    </environment>
+    <script type="text/javascript">
+        $("#Image").change(function () {
+            debugger;
+            filename = this.files[0].name;
+            console.log(filename);
+        });
+        $(function () {
+            $('[id*=btnLoader]').hide();
+            $('[id*=btnSubmit]').on("click", function () {
+                setTimeout(function () {
+                    $('[id*=btnSubmit]').hide();
+                    $('[id*=btnLoader]').show();
+                }, 200);
+            });
+        });
+    </script>
+}
+<style>
+    .sk-chase {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        animation: sk-chase 2.5s infinite linear both;
+    }
+
+    .sk-chase-dot {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        animation: sk-chase-dot 2.0s infinite ease-in-out both;
+    }
+
+        .sk-chase-dot:before {
+            content: '';
+            display: block;
+            width: 25%;
+            height: 25%;
+            background-color: #fff;
+            border-radius: 100%;
+            animation: sk-chase-dot-before 2.0s infinite ease-in-out both;
+        }
+
+        .sk-chase-dot:nth-child(1) {
+            animation-delay: -1.1s;
+        }
+
+        .sk-chase-dot:nth-child(2) {
+            animation-delay: -1.0s;
+        }
+
+        .sk-chase-dot:nth-child(3) {
+            animation-delay: -0.9s;
+        }
+
+        .sk-chase-dot:nth-child(4) {
+            animation-delay: -0.8s;
+        }
+
+        .sk-chase-dot:nth-child(5) {
+            animation-delay: -0.7s;
+        }
+
+        .sk-chase-dot:nth-child(6) {
+            animation-delay: -0.6s;
+        }
+
+        .sk-chase-dot:nth-child(1):before {
+            animation-delay: -1.1s;
+        }
+
+        .sk-chase-dot:nth-child(2):before {
+            animation-delay: -1.0s;
+        }
+
+        .sk-chase-dot:nth-child(3):before {
+            animation-delay: -0.9s;
+        }
+
+        .sk-chase-dot:nth-child(4):before {
+            animation-delay: -0.8s;
+        }
+
+        .sk-chase-dot:nth-child(5):before {
+            animation-delay: -0.7s;
+        }
+
+        .sk-chase-dot:nth-child(6):before {
+            animation-delay: -0.6s;
+        }
+</style>
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-12">
+            </div>
+        </div>
+    </div>
+</div>
+<form method="post" role="form" enctype="multipart/form-data" asp-controller="ObjectDetectionVideo" asp-action="ObjectDetectionOnVideo">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">@L("ObjectDetectionVideo")</h5>
+                </div>
+
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>@L("Category")</label>
+                        <div class="row ">
+                            <div class="col-md-2 btn btn-default">
+                                <input type="checkbox" id="Alcohol" name="Alcohol" asp-for="@Model.Alcohol"><span style="color:black">@L("Alcohol")</span>
+                            </div>
+                            <div class="col-md-2 btn btn-default">
+                                <input type="checkbox" id="Cigarette" name="Cigarette" asp-for="@Model.Cigarette"><span style="color:black">@L("Cigarette")</span>
+                            </div>
+
+                            <div class="col-md-2 btn btn-default">
+                                <input type="checkbox" id="Violence" name="Violence" asp-for="@Model.Violence"><span style="color:black">@L("ElementsofViolence")</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Video (.mp4, .mp3)</label>
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                @*<label for="Image" class="btn" style="background-color: #f8f9fa; border-color: #ddd; font-weight: 500 !important">@L("Choose") .mp4, .mp3</label>
+                                    <input class="btn btn-default" style="visibility:hidden;" type="file" id="Image" name="Image" required accept=".mp4, .mp3">*@
+                                <input type="file" id="Image" name="Image" required accept=".mp4, .mp3">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class=" col-md-3 ">
+                            <input type="submit" value="@L("Detect")" class="btn btn-danger" id="btnSubmit" />
+                            <button class="buttonload" id="btnLoader" style="display: none;" disabled>
+                                <i class="fa fa-spinner fa-spin"></i>@L("Loading")
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer col-12">
+                    <div class="row">
+                        <div class="col-sm-6 col-6">
+                            <div class="description-block border-right">
+                                @if (Model.Image != null)
+                                {
+                                    <div class="video-frame">
+                                        <video controls="controls">
+                                            <source src="~/convert.mp4" type="video/mp4" />
+                                        </video>                  
+                                    </div>
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</form>
+
