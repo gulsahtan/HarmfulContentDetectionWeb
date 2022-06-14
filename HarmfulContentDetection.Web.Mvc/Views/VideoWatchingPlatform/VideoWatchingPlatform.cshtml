@@ -1,4 +1,4 @@
-﻿@model List<HarmfulContentDetection.Web.Dto.ObjectDetectionVideoDetectDto>
+@model List<HarmfulContentDetection.Web.Dto.ObjectDetectionVideoDetectDto>
 @{
     ViewBag.Title = L("VideoWatchingPlatform");
 }
@@ -99,7 +99,6 @@
             </div>
         </div>
     </div>
-    <form method="post" enctype="multipart/form-data" asp-controller="VideoWatchingPlatform" asp-action="Show" id="formimage">
         <section class="content">
             <div class="container-fluid">
                 <div class="card">
@@ -130,27 +129,31 @@
                                 </thead>
                                 <tbody>
                                     @foreach (var item in Model)
-                                {
-                                    <tr>                                 
-                                        <td>
-                                            <input type="hidden" id="Id" asp-for="@item.Id" name="Id"><span style="color:black"></span>
+                                    {
+                                        <form method="post" enctype="multipart/form-data" asp-controller="VideoWatchingPlatform" asp-action="Show" id="formimage">
 
-                                            @item.VideoName
-                                        </td>
-                                        <td>
-                                            @item.VideoContent
-                                        </td>
-                                        <td>
-                                            <input type="checkbox" id="Cigarette" asp-for="@item.Cigarette" name="Cigarette"><span style="color:black">@L("Cigarette")</span>
-                                            <input type="checkbox" id="Violence" asp-for="@item.Violence" name="Violence"><span style="color:black">@L("ElementsofViolence")</span>
-                                            <input type="checkbox" id="Alcohol" asp-for="@item.Alcohol" name="Alcohol"><span style="color:black">@L("Alcohol")</span>
-                                        </td>
-                                        <td>
-                                            <input type="submit" value="@L("Watch")" class="btn btn-danger" id="btnSubmit" />
-                                        </td>
-                                    </tr>
-                                }
-                            </tbody>
+                                            <tr>
+                                                <td>
+                                                    <input type="hidden" id="Id" asp-for="@item.Id" name="Id"><span style="color:black"></span>
+                                                     @item.VideoName
+                                                </td>
+                                                <td>
+                                                    @item.VideoContent
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" id="Cigarette" asp-for="@item.Cigarette" name="Cigarette"><span style="color:black">@L("Cigarette")</span>
+                                                    <input type="checkbox" id="Violence" asp-for="@item.Violence" name="Violence"><span style="color:black">@L("ElementsofViolence")</span>
+                                                    <input type="checkbox" id="Alcohol" asp-for="@item.Alcohol" name="Alcohol"><span style="color:black">@L("Alcohol")</span>
+                                                </td>
+                                                <td>
+                                                    <input type="submit" value="@L("Watch")" class="btn btn-danger" id="btnSubmit" />
+                                                </td>
+                                            </tr>
+                                        </form>
+
+                                    }
+
+                                </tbody>
 
                         </table>
 
@@ -162,6 +165,5 @@
         </div>
 
     </section>
-</form>
 
 
