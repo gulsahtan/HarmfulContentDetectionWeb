@@ -25,6 +25,7 @@ HarmfulContentDetection desktop application contains two modules: RealTime, WebC
 
 - The Video Watch Platform module allows watching the listed videos according to the selected categories. On this platform, the original versions of the pre-trained videos in each category are listed. In this way, the user will be able to watch the videos with object detection by selecting the desired category/categories.
 
+- Demo Video  https://github.com/gulsahtan/HarmfulContentDetectionWeb/blob/main/HarmfulContentDetection.Web.Mvc/Assets/applicationvideo.mp4
 
 ## Team
 
