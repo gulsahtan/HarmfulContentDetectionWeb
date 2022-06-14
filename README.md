@@ -15,7 +15,7 @@ git clone https://github.com/gulsahtan/HarmfulContentDetectionWeb
 
 ## Usage
 
-HarmfulContentDetection desktop application contains two modules: RealTime, WebCam. 
+The HarmfulContentDetection web application includes the following modules:
 
 - Object Detection (Picture) module loads the picture and detects the objects in that picture according to the categories you choose and presents you the final image. After selecting the picture and category, you need to click on the Detect button.
 
