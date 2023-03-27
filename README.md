@@ -12,9 +12,9 @@ git clone https://github.com/gulsahtan/HarmfulContentDetectionWeb
 
 - Demo application is available at https://harmfulcontentdetection.com/
 
--User Name: user
+- User Name: user
 
--User Password: user12345
+- User Password: user12345
 
 
 ## Usage
