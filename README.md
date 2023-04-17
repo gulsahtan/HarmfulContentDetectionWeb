@@ -1,5 +1,5 @@
 # HarmfulContentDetectionWeb
-HarmfulContentDetection web application - Application that performs real time malicious content detection on videos and images with ML.NET, ONNX.
+HarmfulContentDetection web application - Application that performs real time harmful content detection on videos and images with ML.NET, ONNX.
 
 ## Preparation
 
@@ -8,7 +8,7 @@ Run the following commands in order
 git clone https://github.com/gulsahtan/HarmfulContentDetectionWeb
 
 ```
-## Wep URL
+## Web URL
 
 - Demo application is available at https://harmfulcontentdetection.com/
 
@@ -21,13 +21,15 @@ git clone https://github.com/gulsahtan/HarmfulContentDetectionWeb
 
 The HarmfulContentDetection web application includes the following modules:
 
-- Object Detection (Picture) module loads the picture and detects the objects in that picture according to the categories you choose and presents you the final image. After selecting the picture and category, you need to click on the Detect button.
+- Image Censorship module detects the objects in the image according to the categories you have selected and presents the final version to you. After selecting the image and category, you need to press the Detect button.
 
-- Real-Time Object Detection is a module for detecting objects on the web cam and uploaded video in the downloaded desktop application. It is used by running the HarmfulContentDetection.FormApp.exe file.
+- Video Management detects the objects in the video according to the categories you have selected and saves the final video to the database, allowing you to view it on the Watch Video platform. After selecting the video and category, you need to click the Detect button. Please wait until the last video on the page appears.
 
-- The Data Set module contains the data used to build the models in this application.
+- Video Censorship The form application that you will download from the Real-Time Object Detection module detects the objects in real-time according to the categories you have selected in both the webcam and the uploaded video, and instantly presents each frame to you. In this application, both classic object detection and the developed method for object detection are presented together.
 
-- The Video Watch Platform module allows watching the listed videos according to the selected categories. On this platform, the original versions of the pre-trained videos in each category are listed. In this way, the user will be able to watch the videos with object detection by selecting the desired category/categories.
+- Data Set module contains the data used to build the models in this application.
+
+- Watch Video module enables the viewing of listed videos according to the selected categories.
 
 - Demo Video  https://github.com/gulsahtan/HarmfulContentDetectionWeb/blob/main/HarmfulContentDetection.Web.Mvc/Assets/applicationvideo.mp4
 
