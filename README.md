@@ -3,11 +3,21 @@ HarmfulContentDetection web application - Application that performs real time ha
 
 ## Preparation
 
-Run the following commands in order
+Run the following commands for web app in order
 ```bash
 git clone https://github.com/gulsahtan/HarmfulContentDetectionWeb
 
 ```
+Run the following commands for in order (with pipeline)
+```bash
+git clone https://github.com/gulsahtan/HarmfulContentDetectionRealTimeRepo
+```
+
+Run the following commands for in order (without pipeline)
+```bash
+git clone https://github.com/gulsahtan/HarmfulContentDetectionDesktop
+```
+
 ## Web URL
 
 - Demo application is available at https://harmfulcontentdetection.com/
@@ -37,7 +47,7 @@ The HarmfulContentDetection web application includes the following modules:
 
 - Associate Professor. Asım Sinan Yüksel: Süleyman Demirel University Computer Engineering Department, Algorithm Design, Architectural Design, Test
 
-- Lecturer Fatma Gülşah TAN: Süleyman Demirel University Computer Engineering Department, Algorithm Design, Architectural Design, Front-End, Back-End, Test
+- Fatma Gülşah TAN: Süleyman Demirel University Computer Engineering Department, Algorithm Design, Architectural Design, Front-End, Back-End, Test
 
 ## License
 
