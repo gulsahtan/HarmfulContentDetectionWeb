@@ -28,7 +28,7 @@ git clone https://github.com/gulsahtan/HarmfulContentDetectionDesktop
 
 ## Technologies and Tools
 
-* **Front-end:** CSS, JQuery
+* **Front-end:** CSS, JQuery, JavaScript
 * **Back-end:** C#
 * **Database:** MsSql
 * **Data Modeling:** Google Colab (Yolov5) 
