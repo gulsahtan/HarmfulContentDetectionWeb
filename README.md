@@ -1,5 +1,5 @@
 # HarmfulContentDetectionWeb
-HarmfulContentDetection web application - Application that performs real time harmful content detection on videos and images with ML.NET, ONNX.
+HarmfulContentDetection web application is a tool developed using ML.NET and ONNX for real-time detection of harmful content in videos, web cameras, and images. The application features a Video Censorship module that allows users to download a form application for detecting objects in real-time based on selected categories in both the web camera and uploaded video. This application combines both classical object detection and specially developed methods for object detection.
 
 ## Preparation
 
@@ -40,8 +40,6 @@ The HarmfulContentDetection web application includes the following modules:
 - Data Set module contains the data used to build the models in this application.
 
 - Watch Video module enables the viewing of listed videos according to the selected categories.
-
-- Demo Video  https://github.com/gulsahtan/HarmfulContentDetectionWeb/blob/main/HarmfulContentDetection.Web.Mvc/Assets/applicationvideo.mp4
 
 ## Team
 
