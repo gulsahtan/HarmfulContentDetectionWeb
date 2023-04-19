@@ -26,6 +26,17 @@ git clone https://github.com/gulsahtan/HarmfulContentDetectionDesktop
 
 - User Password: user12345
 
+## Technologies and Tools
+
+* **Front-end:** CSS, JQuery
+* **Back-end:** C#
+* **Database:** MsSql
+* **Data Modeling:** Google Colab (Yolov5) 
+* **Model Viewer:** NETRON
+* **Model:** ONNX
+* **Authentication:** Jwt
+* **IDE:** Visual Studio* * 
+* **Version Control System:** Git
 
 ## Usage
 
