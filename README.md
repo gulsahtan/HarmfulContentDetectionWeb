@@ -35,22 +35,41 @@ git clone https://github.com/gulsahtan/HarmfulContentDetectionDesktop
 * **Model Viewer:** NETRON
 * **Model:** ONNX
 * **Authentication:** Jwt
-* **IDE:** Visual Studio* * 
+* **IDE:** Visual Studio
 * **Version Control System:** Git
 
 ## Usage
 
 The HarmfulContentDetection web application includes the following modules:
+-Login 
+
+- User Name: user
+
+- User Password: user12345
+
+![image](images/login.PNG)
 
 - Image Censorship module detects the objects in the image according to the categories you have selected and presents the final version to you. After selecting the image and category, you need to press the Detect button.
 
+![image](images/imagecensorship.PNG)
+
 - Video Management detects the objects in the video according to the categories you have selected and saves the final video to the database, allowing you to view it on the Watch Video platform. After selecting the video and category, you need to click the Detect button. Please wait until the last video on the page appears.
+
+![image](images/videomanagement.PNG)
 
 - Video Censorship The form application that you will download from the Real-Time Object Detection module detects the objects in real-time according to the categories you have selected in both the webcam and the uploaded video, and instantly presents each frame to you. In this application, both classic object detection and the developed method for object detection are presented together.
 
+![image](images/videocensorship.PNG)
+
 - Data Set module contains the data used to build the models in this application.
 
+![image](images/dataset.PNG)
+
 - Watch Video module enables the viewing of listed videos according to the selected categories.
+
+![image](images/watch.PNG)
+
+![image](images/watch2.PNG)
 
 ## Team
 
