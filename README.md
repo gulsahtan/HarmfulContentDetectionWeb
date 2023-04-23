@@ -8,15 +8,27 @@ Run the following commands for web app in order
 git clone https://github.com/gulsahtan/HarmfulContentDetectionWeb
 
 ```
+How to use?
+
+https://github.com/gulsahtan/HarmfulContentDetectionWeb/blob/main/HarmfulContentDetection.Web.Mvc/Assets/web.mp4
+
 Run the following commands for in order (with pipeline)
 ```bash
 git clone https://github.com/gulsahtan/HarmfulContentDetectionRealTimeRepo
 ```
 
+How to use?
+
+https://github.com/gulsahtan/HarmfulContentDetectionWeb/blob/main/HarmfulContentDetection.Web.Mvc/Assets/withpipeline.mp4
+
 Run the following commands for in order (without pipeline)
 ```bash
 git clone https://github.com/gulsahtan/HarmfulContentDetectionDesktop
 ```
+
+How to use?
+
+https://github.com/gulsahtan/HarmfulContentDetectionWeb/blob/main/HarmfulContentDetection.Web.Mvc/Assets/withoutpipeline.mp4
 
 ## Web URL
 
