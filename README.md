@@ -10,8 +10,7 @@ git clone https://github.com/gulsahtan/HarmfulContentDetectionWeb
 ```
 * [Repo of the video player that employs classical approach](https://github.com/gulsahtan/HarmfulContentDetectionDesktop)
 * [Repo of the video player that employs pipeline approach](https://github.com/gulsahtan/HarmfulContentDetectionRealTimeRepo)
-
-[Demo of the web app](https://github.com/gulsahtan/HarmfulContentDetectionWeb/blob/main/HarmfulContentDetection.Web.Mvc/Assets/web.mp4)
+* [Demo Video](https://github.com/gulsahtan/HarmfulContentDetectionWeb/blob/main/HarmfulContentDetection.Web.Mvc/Assets/web.mp4)
 
 
 ## Technologies and Tools
