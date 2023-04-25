@@ -1,5 +1,5 @@
-# HarmfulContentDetectionWeb
-HarmfulContentDetection web application is a tool developed using ML.NET and ONNX for real-time detection of harmful content in videos, web cameras, and images. The application features a Video Censorship module that allows users to download a form application for detecting objects in real-time based on selected categories in both the web camera and uploaded video. This application combines both classical object detection and specially developed methods for object detection.
+# DeepCens
+DeepCens is a unique tool designed to detect and censor undesirable content in real-time. It supports 4 content categories such as explicit content, alcohol, cigarette, and violence. Our system is designed to work on different platforms, inspired by video watching platforms such as Netflix and YouTube, as well as live broadcasting platforms such as Zoom and Microsoft Teams. The real-time censoring process is user-based and operates dynamically. A user can choose one of the supported content categories (or multiple categories) and the censoring process is applied in real-time accordingly. It employs an improved,fastand accurate YOLO-based algorithm with a pipeline architecture. It supports image and video files, web camera streams.
 
 ## Preparation
 
