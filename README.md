@@ -3,40 +3,13 @@ DeepCens is a unique tool designed to detect and censor undesirable content in r
 
 ## Preparation
 
-Run the following commands for web app in order
+Clone the repo that contains the web app and run it from Microsoft Visual Studio
 ```bash
 git clone https://github.com/gulsahtan/HarmfulContentDetectionWeb
 
 ```
-How to use?
+[Demo of the web app](https://github.com/gulsahtan/HarmfulContentDetectionWeb/blob/main/HarmfulContentDetection.Web.Mvc/Assets/web.mp4)
 
-https://github.com/gulsahtan/HarmfulContentDetectionWeb/blob/main/HarmfulContentDetection.Web.Mvc/Assets/web.mp4
-
-Run the following commands for in order (with pipeline)
-```bash
-git clone https://github.com/gulsahtan/HarmfulContentDetectionRealTimeRepo
-```
-
-How to use?
-
-https://github.com/gulsahtan/HarmfulContentDetectionWeb/blob/main/HarmfulContentDetection.Web.Mvc/Assets/withpipeline.mp4
-
-Run the following commands for in order (without pipeline)
-```bash
-git clone https://github.com/gulsahtan/HarmfulContentDetectionDesktop
-```
-
-How to use?
-
-https://github.com/gulsahtan/HarmfulContentDetectionWeb/blob/main/HarmfulContentDetection.Web.Mvc/Assets/withoutpipeline.mp4
-
-## Web URL
-
-- Demo application is available at https://harmfulcontentdetection.com/
-
-- User Name: user
-
-- User Password: user12345
 
 ## Technologies and Tools
 
@@ -52,9 +25,7 @@ https://github.com/gulsahtan/HarmfulContentDetectionWeb/blob/main/HarmfulContent
 
 ## Usage
 
-The HarmfulContentDetection web application includes the following modules:
-
--Login 
+- Demo web application is available at https://harmfulcontentdetection.com/
 
 - User Name: user
 
@@ -62,33 +33,29 @@ The HarmfulContentDetection web application includes the following modules:
 
 ![image](images/login.PNG)
 
-- Image Censorship module detects the objects in the image according to the categories you have selected and presents the final version to you. After selecting the image and category, you need to press the Detect button.
-
-![image](images/imagecensorship.PNG)
-
-- Video Management detects the objects in the video according to the categories you have selected and saves the final video to the database, allowing you to view it on the Watch Video platform. After selecting the video and category, you need to click the Detect button. Please wait until the last video on the page appears.
-
-![image](images/videomanagement.PNG)
-
-- Video Censorship The form application that you will download from the Real-Time Object Detection module detects the objects in real-time according to the categories you have selected in both the webcam and the uploaded video, and instantly presents each frame to you. In this application, both classic object detection and the developed method for object detection are presented together.
-
-![image](images/videocensorship.PNG)
-
-- Data Set module contains the data used to build the models in this application.
+## DeepCens Modules
+* Data Set module contains the data used to build the models.
 
 ![image](images/dataset.PNG)
 
-- Watch Video module enables the viewing of listed videos according to the selected categories.
+* Image Censorship module works on images. The user first selects a content category and clicks detect. The image is censored on the fly and showned to the user.
 
-![image](images/watch.PNG)
+![image](images/imagecensorship.PNG)
 
-![image](images/watch2.PNG)
+* Video Management module works on videos. It is for admin user. The admin selects a video and a content category/categories for censorship. DeepCens censors the video in the background and stores it in our system. After the censoring process is finished, censored video is presented.
+
+![image](images/videomanagement.PNG)
+
+* Video Censorship Module works on videos and web camera streams. It contains two video players which are desktop applications. It showcases two approaches: classical and pipeline approach.
+
+![image](images/videocensorship.PNG)
+
 
 ## Team
 
-- Associate Professor. Asım Sinan Yüksel: Süleyman Demirel University Computer Engineering Department, Algorithm Design, Architectural Design, Test
+* **Supervisor:** Assoc. Prof. Dr. Asım Sinan Yüksel, Süleyman Demirel University Computer Engineering Department. **Roles:** Algorithm Design, Architectural Design, Testing
 
-- Fatma Gülşah TAN: Süleyman Demirel University Computer Engineering Department, Algorithm Design, Architectural Design, Front-End, Back-End, Test
+* **Researcher:** Fatma Gülşah TAN, Süleyman Demirel University Computer Engineering Department: **Roles:** Algorithm Design, Architectural Design, Front-End, Back-End, Test
 
 ## License
 
