@@ -3,8 +3,6 @@ DeepCens is a unique tool designed to detect and censor undesirable content in r
 
 Below video shows a demo of real-time censored movie stream using our TS-Cens (Two Stage Censorship) algorithm.
 
-[Uploading TS-Cens Approach for movie stream - YouTube.webloc…]()
-
 
 ## Preparation
 
