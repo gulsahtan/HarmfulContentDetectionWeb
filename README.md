@@ -2,7 +2,7 @@
 DeepCens is a unique tool designed to detect and censor undesirable content in real-time. It supports 4 content categories: explicit content, alcohol, cigarette, and violence. Our system is designed to work on different platforms, inspired by video watching platforms such as Netflix and YouTube, as well as live broadcasting platforms such as Zoom and Microsoft Teams. The real-time censoring process is user-based and operates dynamically. A user can choose one of the supported content categories (or multiple categories) and the censoring process is applied in real-time accordingly. It employs an improved,fast and accurate YOLO-based algorithm with a pipeline architecture. It supports image and video files, web camera streams.
 
 Below video shows a demo of real-time censored movie stream using our TS-Cens (Two Stage Censorship) algorithm.
-
+https://www.youtube.com/watch?v=-mgzukTrGGg
 
 ## Preparation
 
