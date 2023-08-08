@@ -73,3 +73,17 @@ git clone https://github.com/gulsahtan/HarmfulContentDetectionWeb
 ## License
 
 The source code is free for research and education use only. Any comercial use should get formal permission first.
+
+## Citation
+
+    @article{[EXSY-2023](https://doi.org/10.00000/exsy.0000),
+	Author = {Asim Sinan Yuksel, Fatma Gulsah Tan},
+	Title = {DeepCens:A Deep Learning Based System for Real-Time Image and Video Censorship},
+	Journal  = {Expert Systems},
+     Volume={n/a},
+	Year = {2023},
+    number = {n/a},
+    pages = {0-0},
+    }
+
+
